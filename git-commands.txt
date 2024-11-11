@@ -1,0 +1,72 @@
+Microsoft Windows [Version 10.0.19045.5011]
+(c) Microsoft Corporation. All rights reserved.
+
+E:\demo\demo-git>git config --global user.email "govindkumar96@gmail.com"
+
+E:\demo\demo-git>git init
+Initialized empty Git repository in E:/demo/demo-git/.git/
+
+E:\demo\demo-git>git remote add origin https://github.com/govindkumar96/demo-git.git
+
+E:\demo\demo-git>git pull
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 866 bytes | 10.00 KiB/s, done.
+From https://github.com/govindkumar96/demo-git
+ * [new branch]      main       -> origin/main
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> master
+
+
+E:\demo\demo-git>git switch main
+branch 'main' set up to track 'origin/main'.
+Switched to a new branch 'main'
+
+E:\demo\demo-git>git branch
+* main
+
+E:\demo\demo-git>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        git-commands.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+E:\demo\demo-git>git add git-commands.txt
+
+E:\demo\demo-git>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   git-commands.txt
+
+
+E:\demo\demo-git>git commit -m "First Commit"
+[main deb47c2] First Commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 git-commands.txt
+
+E:\demo\demo-git>git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 284 bytes | 142.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/govindkumar96/demo-git.git
+   f373603..deb47c2  main -> main
+
+E:\demo\demo-git>
